@@ -9,7 +9,7 @@ jobs:
   update-closed-days:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Create .env file
         run: cat env.* > .env
       - name: Load .env file
@@ -26,7 +26,7 @@ jobs:
           ALMA_API_KEY: ${{ secrets.ALMA_API_KEY }}
         run: bundle exec ruby bin/update_alma_config.rb
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with: 
           branch: update-closed-days
           commit-message: "Update closed days"
