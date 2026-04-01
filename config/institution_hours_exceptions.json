@@ -2,86 +2,6 @@
   "open_hour": [
     {
       "type": {
-        "value": "EXCEPTION",
-        "desc": "Exception"
-      },
-      "inherited": false,
-      "desc": "Memorial Day",
-      "from_date": "2025-05-26Z",
-      "to_date": "2025-05-26Z",
-      "from_hour": "00:00",
-      "to_hour": "23:59",
-      "status": {
-        "value": "CLOSE",
-        "desc": "Closed"
-      }
-    },
-    {
-      "type": {
-        "value": "EXCEPTION",
-        "desc": "Exception"
-      },
-      "inherited": false,
-      "desc": "Independence Day",
-      "from_date": "2025-07-04Z",
-      "to_date": "2025-07-04Z",
-      "from_hour": "00:00",
-      "to_hour": "23:59",
-      "status": {
-        "value": "CLOSE",
-        "desc": "Closed"
-      }
-    },
-    {
-      "type": {
-        "value": "EXCEPTION",
-        "desc": "Exception"
-      },
-      "inherited": false,
-      "desc": "Labor Day",
-      "from_date": "2025-09-01Z",
-      "to_date": "2025-09-01Z",
-      "from_hour": "00:00",
-      "to_hour": "23:59",
-      "status": {
-        "value": "CLOSE",
-        "desc": "Closed"
-      }
-    },
-    {
-      "type": {
-        "value": "EXCEPTION",
-        "desc": "Exception"
-      },
-      "inherited": false,
-      "desc": "Thanksgiving",
-      "from_date": "2025-11-27Z",
-      "to_date": "2025-11-28Z",
-      "from_hour": "00:00",
-      "to_hour": "23:59",
-      "status": {
-        "value": "CLOSE",
-        "desc": "Closed"
-      }
-    },
-    {
-      "type": {
-        "value": "EXCEPTION",
-        "desc": "Exception"
-      },
-      "inherited": false,
-      "desc": "Winter Holidays",
-      "from_date": "2025-12-25Z",
-      "to_date": "2026-01-01Z",
-      "from_hour": "00:00",
-      "to_hour": "23:59",
-      "status": {
-        "value": "CLOSE",
-        "desc": "Closed"
-      }
-    },
-    {
-      "type": {
         "value": "EVENT",
         "desc": "Event"
       },
@@ -104,6 +24,86 @@
       "status": {
         "value": "OPEN",
         "desc": "Open"
+      }
+    },
+    {
+      "type": {
+        "value": "EXCEPTION",
+        "desc": "Exception"
+      },
+      "inherited": false,
+      "desc": "Memorial Day",
+      "from_date": "2026-05-25Z",
+      "to_date": "2026-05-25Z",
+      "from_hour": "00:00",
+      "to_hour": "23:59",
+      "status": {
+        "value": "CLOSE",
+        "desc": "Closed"
+      }
+    },
+    {
+      "type": {
+        "value": "EXCEPTION",
+        "desc": "Exception"
+      },
+      "inherited": false,
+      "desc": "Independence Day",
+      "from_date": "2026-07-03Z",
+      "to_date": "2026-07-03Z",
+      "from_hour": "00:00",
+      "to_hour": "23:59",
+      "status": {
+        "value": "CLOSE",
+        "desc": "Closed"
+      }
+    },
+    {
+      "type": {
+        "value": "EXCEPTION",
+        "desc": "Exception"
+      },
+      "inherited": false,
+      "desc": "Labor Day",
+      "from_date": "2026-09-07Z",
+      "to_date": "2026-09-07Z",
+      "from_hour": "00:00",
+      "to_hour": "23:59",
+      "status": {
+        "value": "CLOSE",
+        "desc": "Closed"
+      }
+    },
+    {
+      "type": {
+        "value": "EXCEPTION",
+        "desc": "Exception"
+      },
+      "inherited": false,
+      "desc": "Thanksgiving",
+      "from_date": "2026-11-26Z",
+      "to_date": "2026-11-27Z",
+      "from_hour": "00:00",
+      "to_hour": "23:59",
+      "status": {
+        "value": "CLOSE",
+        "desc": "Closed"
+      }
+    },
+    {
+      "type": {
+        "value": "EXCEPTION",
+        "desc": "Exception"
+      },
+      "inherited": false,
+      "desc": "Winter Holidays",
+      "from_date": "2026-12-25Z",
+      "to_date": "2027-01-03Z",
+      "from_hour": "00:00",
+      "to_hour": "23:59",
+      "status": {
+        "value": "CLOSE",
+        "desc": "Closed"
       }
     }
   ]
