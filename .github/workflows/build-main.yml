@@ -1,40 +1,22 @@
 name: Build latest from main and AutoDeploy to Testing
-
 on:
   workflow_run:
-    workflows: [ 'Run Tests' ]
-    branches: [ 'main' ]
-    types: [ completed ]
-
+    workflows: ['Run Tests']
+    branches: ['main']
+    types: [completed]
 jobs:
   build-unstable:
     name: Build unstable ${{ github.sha }}
-    uses: mlibrary/platform-engineering-workflows/.github/workflows/build-unstable.yml@v1
+    uses: mlibrary/platform-engineering-workflows/.github/workflows/build-unstable.yml@2012bb6a322ad02c45c01372de2f5e2e3d7329ac # v1.6.7
     with:
       image_name: ${{ vars.IMAGE_NAME }}
       tag: ${{ github.sha }}
       dockerfile: Dockerfile
     secrets: inherit
-
-  #scan-image:
-    #needs: build-unstable
-    #runs-on: ubuntu-latest
-    #steps:
-      #- name: Run Trivy vulnerability scanner
-        #uses: aquasecurity/trivy-action@master
-        #with:
-          #image-ref: ${{ needs.build-unstable.outputs.image }}
-          #format: 'table'
-          #exit-code: '1'
-          #ignore-unfixed: true
-          #vuln-type: 'os,library'
-          #severity: 'CRITICAL,HIGH'
-          #skip-files: '/gems/ruby/3.2.0/gems/openid_connect-2.2.0/spec/mock_response/public_keys/private_key.pem'
-
   deploy-testing:
     needs: build-unstable
     name: Deploy to testing
-    uses: mlibrary/platform-engineering-workflows/.github/workflows/deploy.yml@v1
+    uses: mlibrary/platform-engineering-workflows/.github/workflows/deploy.yml@2012bb6a322ad02c45c01372de2f5e2e3d7329ac # v1.6.7
     with:
       image: ${{ needs.build-unstable.outputs.image }}
       file: environments/get-this/workshop/web-image.txt

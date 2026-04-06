@@ -1,9 +1,9 @@
-FROM ruby:3.4 AS development
+FROM ruby:4.0 AS development
 
 ARG UNAME=app
 ARG UID=1000
 ARG GID=1000
-ARG NODE_MAJOR=20
+ARG NODE_MAJOR=24
 
 
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
