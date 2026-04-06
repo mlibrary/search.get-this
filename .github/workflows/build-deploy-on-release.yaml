@@ -1,38 +1,20 @@
 name: Build and Deploy Production
-
 on:
   release:
-    types: [ released ]
-
+    types: [released]
 jobs:
   build-production:
     name: Build production ${{ github.event.release.tag_name }}
-    uses: mlibrary/platform-engineering-workflows/.github/workflows/build-production.yml@v1
+    uses: mlibrary/platform-engineering-workflows/.github/workflows/build-production.yml@2012bb6a322ad02c45c01372de2f5e2e3d7329ac # v1.6.7
     with:
       image_name: ${{ vars.IMAGE_NAME }}
       tag: ${{ github.event.release.tag_name }}
       dockerfile: Dockerfile
     secrets: inherit
-
-  #scan-image:
-    #needs: build-production
-    #runs-on: ubuntu-latest
-    #steps:
-      #- name: Run Trivy vulnerability scanner
-        #uses: aquasecurity/trivy-action@master
-        #with:
-          #image-ref: ghcr.io/mlibrary/${{ vars.IMAGE_NAME }}:${{ github.event.release.tag_name }}
-          #format: 'table'
-          #exit-code: '1'
-          #ignore-unfixed: true
-          #vuln-type: 'os,library'
-          #severity: 'CRITICAL,HIGH'
-          #skip-files: '/gems/ruby/3.2.0/gems/openid_connect-2.2.0/spec/mock_response/public_keys/private_key.pem'
-
   deploy-production:
     needs: build-production
     name: Deploy to production
-    uses: mlibrary/platform-engineering-workflows/.github/workflows/deploy.yml@v1
+    uses: mlibrary/platform-engineering-workflows/.github/workflows/deploy.yml@2012bb6a322ad02c45c01372de2f5e2e3d7329ac # v1.6.7
     with:
       image: ghcr.io/mlibrary/${{ vars.IMAGE_NAME }}:${{ github.event.release.tag_name }}
       file: environments/get-this/production/web-image.txt
