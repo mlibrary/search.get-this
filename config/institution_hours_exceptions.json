@@ -2,32 +2,6 @@
   "open_hour": [
     {
       "type": {
-        "value": "EVENT",
-        "desc": "Event"
-      },
-      "inherited": false,
-      "desc": "Reserves End of Term",
-      "from_date": "2026-04-27Z",
-      "status": {
-        "value": "OPEN",
-        "desc": "Open"
-      }
-    },
-    {
-      "type": {
-        "value": "EVENT",
-        "desc": "Event"
-      },
-      "inherited": false,
-      "desc": "End of Term",
-      "from_date": "2026-05-02Z",
-      "status": {
-        "value": "OPEN",
-        "desc": "Open"
-      }
-    },
-    {
-      "type": {
         "value": "EXCEPTION",
         "desc": "Exception"
       },
@@ -56,6 +30,32 @@
       "status": {
         "value": "CLOSE",
         "desc": "Closed"
+      }
+    },
+    {
+      "type": {
+        "value": "EVENT",
+        "desc": "Event"
+      },
+      "inherited": false,
+      "desc": "Reserves End of Term",
+      "from_date": "2026-08-17Z",
+      "status": {
+        "value": "OPEN",
+        "desc": "Open"
+      }
+    },
+    {
+      "type": {
+        "value": "EVENT",
+        "desc": "Event"
+      },
+      "inherited": false,
+      "desc": "End of Term",
+      "from_date": "2026-08-28Z",
+      "status": {
+        "value": "OPEN",
+        "desc": "Open"
       }
     },
     {
