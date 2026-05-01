@@ -15,7 +15,7 @@ jobs:
       - name: Load .env file
         uses: xom9ikk/dotenv@ac290ca23a42155a0cba1031d23afa46240116a9 # v2.3.0
       - name: Set up Ruby 4.0
-        uses: ruby/setup-ruby@3ff19f5e2baf30647122352b96108b1fbe250c64 # v1.299.0
+        uses: ruby/setup-ruby@c4e5b1316158f92e3d49443a9d58b31d25ac0f8f # v1.306.0
         with:
           ruby-version: '4.0'
           bundler-cache: true
@@ -26,7 +26,7 @@ jobs:
           ALMA_API_KEY: ${{ secrets.ALMA_API_KEY }}
         run: bundle exec ruby bin/update_alma_config.rb
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
 
         with: 
           branch: update-closed-days
