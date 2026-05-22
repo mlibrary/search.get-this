@@ -22,14 +22,14 @@ services:
   css:
     build:
       context: .
-      target: development
+      target: assets
     volumes:
       - .:/app
-    command: bundle exec ruby ./config/css-listener.rb
+    command: npm run watch:css
   js:
     build:
       context: .
-      target: development
+      target: assets
     volumes:
       - .:/app
-    command: bundle exec ruby ./config/js-listener.rb
+    command: npm run watch:js
