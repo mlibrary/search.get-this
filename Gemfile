@@ -20,7 +20,6 @@ gem "net-smtp", require: false
 
 group :development do
   gem "sinatra-contrib"
-  gem "listen"
 end
 group :development, :test do
   gem "standard"
