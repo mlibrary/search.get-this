@@ -25,17 +25,14 @@ RUN npm run build
 ################################################################################
 # DEVELOPMENT                                           								       # 
 ################################################################################
-FROM ruby:4.0 AS development
+FROM ruby:4.0-slim AS development
 
 ARG UID=1000
 ARG GID=1000
 
 
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
-  ca-certificates \
-  gnupg \
-  apt-transport-https \
-  nodejs \
+  curl \
   vim-tiny
 
 RUN groupadd -g ${GID} -o app
