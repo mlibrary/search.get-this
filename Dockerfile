@@ -1,3 +1,6 @@
+################################################################################
+# DEVELOPMENT                                           								       # 
+################################################################################
 FROM ruby:4.0 AS development
 
 ARG UNAME=app
@@ -23,14 +26,22 @@ RUN npm install -g npm
 
 RUN groupadd -g ${GID} -o ${UNAME}
 RUN useradd -m -d /app -u ${UID} -g ${GID} -o -s /bin/bash ${UNAME}
+
 RUN mkdir -p /gems && chown ${UID}:${GID} /gems
+ENV GEM_HOME=/gems
+USER app
+RUN gem install bundler
 
-USER $UNAME
 
-ENV BUNDLE_PATH /gems
+#USER root
+
+ENV BUNDLE_PATH /app/vendor/bundle
 
 WORKDIR /app
 
+################################################################################
+# PRODUCTION                                                                   #
+################################################################################
 FROM development AS production
 
 COPY --chown=${UID}:${GID} . /app
