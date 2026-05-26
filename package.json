@@ -6,8 +6,8 @@
   "scripts": {
     "build": "FILE_TYPE=css npm run build:type && FILE_TYPE=js npm run build:type",
     "build:type": "esbuild \"$FILE_TYPE/*.$FILE_TYPE\" --bundle --minify --outdir=public/bundles $*",
-    "watch:css": "FILE_TYPE=css npm run build:type -- --watch",
-    "watch:js": "FILE_TYPE=js npm run build:type -- --watch"
+    "watch:css": "FILE_TYPE=css npm run build:type -- --watch=forever",
+    "watch:js": "FILE_TYPE=js npm run build:type -- --watch=forever"
   },
   "repository": {
     "type": "git",

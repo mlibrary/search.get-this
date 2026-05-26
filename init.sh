@@ -19,13 +19,11 @@ echo "🚢 Build docker images"
 docker compose build
 
 echo "📦 Installing Gems"
-docker compose run --rm web bundle
+docker compose run --rm web bundle install
 
 echo "📦 Installing Node modules"
-docker compose run --rm web npm install
+docker compose run --rm css npm install
 
-echo "📦 Building css"
-docker compose run --rm web npm run build
+echo "📦 Building css and js"
+docker compose run --rm css npm run build
 
-echo "📦 Copying over js"
-cp js/* public/bundles/

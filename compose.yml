@@ -1,6 +1,6 @@
 services:
   web:
-    build: 
+    build:
       context: .
       target: development
     ports:
@@ -8,36 +8,28 @@ services:
       - "9394:9394"
     volumes:
       - .:/app
-      - gem_cache:/gems
     env_file:
       - .env
       - env.development
     command:
-      - bundle 
-      - exec 
-      - rackup 
+      - bundle
+      - exec
+      - rackup
       - -p
       - "4567"
       - --host
       - 0.0.0.0
-
   css:
-    build: 
+    build:
       context: .
-      target: development
+      target: assets
     volumes:
       - .:/app
-      - gem_cache:/gems
-    command: bundle exec ruby ./config/css-listener.rb
-
+    command: npm run watch:css
   js:
     build:
       context: .
-      target: development
+      target: assets
     volumes:
       - .:/app
-      - gem_cache:/gems
-    command: bundle exec ruby ./config/js-listener.rb
-
-volumes:
-  gem_cache:
+    command: npm run watch:js
