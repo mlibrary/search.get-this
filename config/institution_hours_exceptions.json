@@ -34,32 +34,6 @@
     },
     {
       "type": {
-        "value": "EVENT",
-        "desc": "Event"
-      },
-      "inherited": false,
-      "desc": "Reserves End of Term",
-      "from_date": "2026-08-17Z",
-      "status": {
-        "value": "OPEN",
-        "desc": "Open"
-      }
-    },
-    {
-      "type": {
-        "value": "EVENT",
-        "desc": "Event"
-      },
-      "inherited": false,
-      "desc": "End of Term",
-      "from_date": "2026-08-28Z",
-      "status": {
-        "value": "OPEN",
-        "desc": "Open"
-      }
-    },
-    {
-      "type": {
         "value": "EXCEPTION",
         "desc": "Exception"
       },
@@ -92,6 +66,32 @@
     },
     {
       "type": {
+        "value": "EVENT",
+        "desc": "Event"
+      },
+      "inherited": false,
+      "desc": "Reserves End of Term",
+      "from_date": "2026-12-14Z",
+      "status": {
+        "value": "OPEN",
+        "desc": "Open"
+      }
+    },
+    {
+      "type": {
+        "value": "EVENT",
+        "desc": "Event"
+      },
+      "inherited": false,
+      "desc": "Carrel Keys End of Term Due Date",
+      "from_date": "2026-12-21Z",
+      "status": {
+        "value": "OPEN",
+        "desc": "Open"
+      }
+    },
+    {
+      "type": {
         "value": "EXCEPTION",
         "desc": "Exception"
       },
@@ -104,6 +104,19 @@
       "status": {
         "value": "CLOSE",
         "desc": "Closed"
+      }
+    },
+    {
+      "type": {
+        "value": "EVENT",
+        "desc": "Event"
+      },
+      "inherited": false,
+      "desc": "End of Term",
+      "from_date": "2027-01-04Z",
+      "status": {
+        "value": "OPEN",
+        "desc": "Open"
       }
     }
   ]
