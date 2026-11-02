@@ -233,7 +233,6 @@ DEPENDENCIES
   climate_control
   debug
   faraday-follow_redirects
-  json
   net-smtp
   ostruct
   puma
