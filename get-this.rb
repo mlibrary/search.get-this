@@ -51,14 +51,14 @@ before do
   set_patron
 end
 
-# :nocov:
+# simplecov:disable
 if dev_login?
   post "/session_switcher" do
     session[:uniqname] = params[:uniqname]
     redirect "/#{params[:item]}"
   end
 end
-# :nocov:
+# :simplecov:enable
 
 get "/confirmation" do
   erb :confirmation
