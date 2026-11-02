@@ -10,7 +10,6 @@ gem "activesupport" # in here because of timezone support
 gem "sinatra-flash"
 gem "rackup"
 gem "ostruct"
-gem "json"
 
 gem "alma_rest_client",
   git: "https://github.com/mlibrary/alma_rest_client",
